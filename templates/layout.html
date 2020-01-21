@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+  <head>
+    <title>My page</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename="css/main.css") }}"/>
+  </head>
+  <body>
+    <header>
+      <div>
+        <nav>
+          <ul class = "menu">
+            <li {% if active_page == "home" %}
+                   class="active"
+                {% endif %}>
+              <a href="/home">Home</a></li>
+            <li {% if active_page == "about" %}
+                   class="active"
+                {% endif %}><a href="/about">About</a></li>
+            <li {% if active_page == "contact" %}
+                   class="active"
+                {% endif %}><a href="/contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    <header/>
+    <div class = "caontainer">
+      {% block saturs %}
+
+      {% endblock %}
+    </div>
+  </body>
+</html>
