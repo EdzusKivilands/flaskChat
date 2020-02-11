@@ -2,6 +2,7 @@
   <head>
     <title>My page</title>
     <link rel="stylesheet" href="{{ url_for('static',filename="css/main.css") }}"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   </head>
   <body>
     <header>
@@ -15,9 +16,9 @@
             <li {% if active_page == "about" %}
                    class="active"
                 {% endif %}><a href="/about">About</a></li>
-            <li {% if active_page == "contact" %}
+            <li {% if active_page == "chat" %}
                    class="active"
-                {% endif %}><a href="/contact">Contact</a></li>
+                {% endif %}><a href="/chat">Chat</a></li>
           </ul>
         </nav>
       </div>
